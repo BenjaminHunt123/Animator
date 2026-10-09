@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animator | Career Profile & Production Hub</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- QRCode.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        cinema: {
+                            950: '#0a0b10',
+                            900: '#121420',
+                            850: '#161928',
+                            800: '#1a1d2e',
+                            700: '#23273a',
+                            600: '#323850',
+                            coral: '#ff2a6d',
+                            cyan: '#05d9e8',
+                            purple: '#8b5cf6',
+                            gold: '#ffbd59'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0b10;
+            color: #f3f4f6;
+            background-image: 
+                radial-gradient(circle at 10% 15%, rgba(255, 42, 109, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 75%, rgba(5, 217, 232, 0.09) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+                linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px, 28px 28px;
+        }
+        .glass-card {
+            background: rgba(18, 20, 32, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card:hover {
+            border-color: rgba(255, 42, 109, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(255, 42, 109, 0.15);
+        }
+        .coral-gradient-text {
+            background: linear-gradient(135deg, #ff2a6d 0%, #05d9e8 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cyan-gradient-text {
+            background: linear-gradient(135deg, #05d9e8 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-coral {
+            box-shadow: 0 0 25px -5px rgba(255, 42, 109, 0.25);
+        }
+        /* Custom Range Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            background: #1a1d2e;
+            border-radius: 8px;
+            height: 8px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #ff2a6d;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 42, 109, 0.8);
+            transition: transform 0.15s ease;
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0b10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #23273a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff2a6d;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-cinema-coral selection:text-white">
+
+    <header class="sticky top-0 z-40 w-full glass-card border-b border-cinema-700/60 bg-cinema-950/85 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo Brand -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cinema-coral via-cinema-purple to-cinema-cyan flex items-center justify-center text-white shadow-lg shadow-cinema-coral/20 group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-film text-lg"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl sm:text-2xl tracking-tight text-white group-hover:text-cinema-coral transition-colors">
+                        Ani<span class="text-cinema-coral font-mono">&lt;mator&gt;</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-medium text-slate-300">
+                    <a href="#overview" class="hover:text-cinema-coral transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-clapperboard text-xs text-cinema-coral"></i> Overview
+                    </a>
+                    <a href="#skills" class="hover:text-cinema-coral transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-layer-group text-xs text-cinema-cyan"></i> Skills & Tools
+                    </a>
+                    <a href="#duties" class="hover:text-cinema-coral transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-timeline text-xs text-cinema-purple"></i> Workflow
+                    </a>
+                    <a href="#pay" class="hover:text-cinema-coral transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-coins text-xs text-cinema-gold"></i> Pay Benchmarks
+                    </a>
+                    <a href="#calculator" class="hover:text-cinema-coral transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-calculator text-xs text-cinema-coral"></i> Production Estimator
+                    </a>
+                </nav>
+
+                <!-- Actions / Share QR Button -->
+                <div class="flex items-center gap-3">
+                    <button id="qrOpenBtn" class="px-3.5 py-2 rounded-xl bg-cinema-800 hover:bg-cinema-700 text-slate-200 border border-cinema-700 text-xs sm:text-sm font-medium flex items-center gap-2 transition-all hover:border-cinema-coral/50 shadow-sm" title="Generate Shareable QR Code">
+                        <i class="fa-solid fa-qrcode text-cinema-coral"></i>
+                        <span class="hidden sm:inline">QR Share</span>
+                    </button>
+                    
+                    <!-- Mobile Drawer Toggle -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl text-slate-400 hover:text-white hover:bg-cinema-800 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-cinema-900 border-b border-cinema-700 px-4 pt-2 pb-4 space-y-2 text-sm">
+            <a href="#overview" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-cinema-800 hover:text-cinema-coral">
+                <i class="fa-solid fa-clapperboard mr-2 text-cinema-coral"></i> Overview
+            </a>
+            <a href="#skills" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-cinema-800 hover:text-cinema-coral">
+                <i class="fa-solid fa-layer-group mr-2 text-cinema-cyan"></i> Skills & Tools
+            </a>
+            <a href="#duties" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-cinema-800 hover:text-cinema-coral">
+                <i class="fa-solid fa-timeline mr-2 text-cinema-purple"></i> Workflow
+            </a>
+            <a href="#pay" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-cinema-800 hover:text-cinema-coral">
+                <i class="fa-solid fa-coins mr-2 text-cinema-gold"></i> Pay Benchmarks
+            </a>
+            <a href="#calculator" class="mobile-link block px-3 py-2 rounded-lg font-medium text-slate-200 hover:bg-cinema-800 hover:text-cinema-coral">
+                <i class="fa-solid fa-calculator mr-2 text-cinema-coral"></i> Production Estimator
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="overview" class="relative pt-12 pb-20 overflow-hidden">
+            <!-- Glow Background Highlights -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-cinema-coral/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-1/3 right-10 w-80 h-80 bg-cinema-cyan/12 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <!-- Slate Reel Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cinema-800/90 border border-cinema-coral/30 text-xs sm:text-sm font-mono text-cinema-coral mb-6 shadow-inner">
+                        <span class="flex h-2 w-2 rounded-full bg-cinema-coral animate-ping"></span>
+                        REC • 24 FPS • Timeline Active
+                    </div>
+
+                    <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                        Visual <span class="coral-gradient-text">Animator</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-xl font-light leading-relaxed mb-8">
+                        2D/3D Animator, Motion Graphics Artist & Character Rigging Specialist. Transforming static artwork and digital models into fluid, emotive motion for film, television, games, and commercial media.
+                    </p>
+
+                    <!-- Key Discipline Badges -->
+                    <div class="flex flex-wrap justify-center gap-2.5 text-xs sm:text-sm mb-10 font-mono">
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-cinema-700">
+                            <i class="fa-solid fa-pen-nib text-cinema-coral"></i> 2D Frame-by-Frame
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-cinema-700">
+                            <i class="fa-solid fa-bone text-cinema-cyan"></i> 3D Character Rigging
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-cinema-700">
+                            <i class="fa-solid fa-wand-magic-sparkles text-cinema-purple"></i> Motion Graphics
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-cinema-700">
+                            <i class="fa-solid fa-images text-cinema-gold"></i> Storyboarding
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl glass-card text-slate-200 flex items-center gap-2 border-cinema-700">
+                            <i class="fa-solid fa-burst text-rose-400"></i> VFX & Compositing
+                        </span>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-wrap justify-center gap-4 text-xs sm:text-sm font-semibold">
+                        <a href="#skills" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cinema-coral via-cinema-purple to-cinema-cyan text-white font-bold hover:brightness-110 transition-all shadow-lg shadow-cinema-coral/20 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group"></i> Explore Skills
+                        </a>
+                        <a href="#calculator" class="px-6 py-3.5 rounded-xl glass-card text-white hover:border-cinema-coral transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-calculator text-cinema-coral"></i> Production Calculator
+                        </a>
+                        <button onclick="document.getElementById('qrOpenBtn').click()" class="px-6 py-3.5 rounded-xl glass-card text-slate-300 hover:text-white transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-qrcode text-cinema-cyan"></i> Generate QR Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Timeline Bar Header -->
+                <div class="mt-14 glass-card rounded-2xl p-4 sm:p-6 glow-coral border-cinema-coral/20 max-w-4xl mx-auto">
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs">
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                            </div>
+                            <span class="text-slate-400">~/animation-suite/timeline.anim</span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 text-slate-300">
+                            <span><i class="fa-solid fa-play text-cinema-coral mr-1"></i> FPS: 24.00</span>
+                            <span><i class="fa-solid fa-bezier-curve text-cinema-cyan mr-1"></i> Curve: Spline</span>
+                            <span class="text-cinema-purple"><i class="fa-solid fa-check-double mr-1"></i> Ready for GitHub Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-16 bg-cinema-900/60 border-t border-cinema-700/60 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-cinema-coral font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider">// Section 01</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Skills & Technical Qualifications</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">Core foundational animation principles, software suite mastery, and industry certifications.</p>
+                </div>
+
+                <!-- Core Competencies Grid -->
+                <h3 class="text-lg font-display font-bold text-white mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-gears text-cinema-coral"></i> Core Animation Competencies
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    
+                    <!-- Competency 1 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-cinema-coral/10 border border-cinema-coral/30 flex items-center justify-center text-cinema-coral mb-5">
+                            <i class="fa-solid fa-heart-pulse text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">12 Principles of Animation</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Mastery of squash and stretch, anticipation, staging, follow-through, slow in/slow out, arcs, secondary action, timing, and appeal.
+                        </p>
+                        <span class="text-xs font-mono text-cinema-coral bg-cinema-950 px-2.5 py-1 rounded-md border border-cinema-coral/30">Timing • Weight • Arcs</span>
+                    </div>
+
+                    <!-- Competency 2 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-cinema-cyan/10 border border-cinema-cyan/30 flex items-center justify-center text-cinema-cyan mb-5">
+                            <i class="fa-solid fa-sliders text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Keyframing & In-betweening</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Posing golden keyframes, setting break-down poses, graph editor Euler angle manipulation, and smoothing motion interpolation curves.
+                        </p>
+                        <span class="text-xs font-mono text-cinema-cyan bg-cinema-950 px-2.5 py-1 rounded-md border border-cinema-cyan/30">Graph Editor • Splines</span>
+                    </div>
+
+                    <!-- Competency 3 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-cinema-purple/10 border border-cinema-purple/30 flex items-center justify-center text-cinema-purple mb-5">
+                            <i class="fa-solid fa-bone text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Character Rigging & Skinning</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Skeleton hierarchy creation, Inverse/Forward Kinematics (IK/FK) switches, weight painting vertex skinning, and custom control shapes.
+                        </p>
+                        <span class="text-xs font-mono text-cinema-purple bg-cinema-950 px-2.5 py-1 rounded-md border border-cinema-purple/30">IK/FK • Weight Painting</span>
+                    </div>
+
+                    <!-- Competency 4 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-cinema-gold/10 border border-cinema-gold/30 flex items-center justify-center text-cinema-gold mb-5">
+                            <i class="fa-solid fa-images text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Storyboarding & Animatic Timing</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Visualizing script beats, camera direction, field guides, shot composition, and cutting animatics with scratched audio tracks.
+                        </p>
+                        <span class="text-xs font-mono text-cinema-gold bg-cinema-950 px-2.5 py-1 rounded-md border border-cinema-gold/30">Shot Composition • Pacing</span>
+                    </div>
+
+                    <!-- Competency 5 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 mb-5">
+                            <i class="fa-solid fa-face-smile text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Lip-Sync & Facial Rigging</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Phoneme/Viseme mouth shape matching, blendshapes, shape keys, facial node drivers, and subtle emotive eye/eyebrow acting.
+                        </p>
+                        <span class="text-xs font-mono text-rose-300 bg-cinema-950 px-2.5 py-1 rounded-md border border-rose-500/30">Visemes • Blendshapes</span>
+                    </div>
+
+                    <!-- Competency 6 -->
+                    <div class="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5">
+                            <i class="fa-solid fa-layer-group text-xl"></i>
+                        </div>
+                        <h4 class="font-display text-xl font-bold text-white mb-2">Compositing, Lighting & VFX</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Multi-pass rendering (Diffuse, Specular, Depth), camera tracking, particle systems, motion blur pass, and color grading.
+                        </p>
+                        <span class="text-xs font-mono text-emerald-300 bg-cinema-950 px-2.5 py-1 rounded-md border border-emerald-500/30">Render Passes • Nuke • After Effects</span>
+                    </div>
+
+                </div>
+
+                <!-- Software Suite & Qualifications Split -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Software Tools Suite -->
+                    <div class="glass-card rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-laptop-code text-cinema-cyan"></i> Software Suite & Industry Tools
+                        </h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mb-6">Industry-standard 2D/3D suites, rigging tools, and compositing applications.</p>
+
+                        <div class="space-y-3 font-mono text-xs">
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-cinema-950 border border-cinema-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-teal-950 text-cinema-cyan flex items-center justify-center font-bold">M</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Autodesk Maya</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">3D keyframe animation, character rigging & XGen</p>
+                                    </div>
+                                </div>
+                                <span class="text-cinema-cyan">Master</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-cinema-950 border border-cinema-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-orange-950 text-orange-400 flex items-center justify-center font-bold"><i class="fa-solid fa-cube"></i></div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Blender 3D</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">Grease Pencil 2D/3D hybrid, rigging & Cycles render</p>
+                                    </div>
+                                </div>
+                                <span class="text-orange-400">Expert</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-cinema-950 border border-cinema-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-rose-950 text-cinema-coral flex items-center justify-center font-bold">TB</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Toon Boom Harmony</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">Industry standard 2D vector cutout & frame-by-frame</p>
+                                    </div>
+                                </div>
+                                <span class="text-cinema-coral">Master</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-cinema-950 border border-cinema-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-purple-950 text-purple-400 flex items-center justify-center font-bold">AE</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Adobe After Effects & Cinema 4D</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">2D/3D motion graphics, Duik Angela rigging & MoGraph</p>
+                                    </div>
+                                </div>
+                                <span class="text-purple-300">Expert</span>
+                            </div>
+
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-cinema-950 border border-cinema-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-blue-950 text-blue-400 flex items-center justify-center font-bold">UE</div>
+                                    <div>
+                                        <h5 class="font-semibold text-white font-sans text-sm">Unreal Engine (Control Rig) & TVPaint</h5>
+                                        <p class="text-slate-400 text-[11px] font-sans">Real-time cinematic Sequencer & traditional bitmap 2D</p>
+                                    </div>
+                                </div>
+                                <span class="text-blue-400">Proficient</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Credentials & Qualifications -->
+                    <div class="glass-card rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-xl font-display font-bold text-white mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-graduation-cap text-cinema-purple"></i> Academic & Industry Credentials
+                        </h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mb-6">Degrees, software vendor certifications, and accredited portfolio achievements.</p>
+
+                        <div class="space-y-4">
+                            <div class="p-4 rounded-xl bg-cinema-950 border border-cinema-700">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h5 class="font-semibold text-white text-sm">BA (Hons) Animation / Digital Media</h5>
+                                        <p class="text-xs text-slate-400">UK Higher Education Qualification</p>
+                                        <p class="text-xs text-slate-500 mt-1">Specialization in 3D character performance, mechanics, and visual storytelling.</p>
+                                    </div>
+                                    <span class="text-xs font-mono font-semibold px-2 py-1 bg-cinema-coral/10 text-cinema-coral rounded border border-cinema-coral/30">BA Degree</span>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-cinema-950 border border-cinema-700">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h5 class="font-semibold text-white text-sm">Toon Boom Harmony Certified Associate</h5>
+                                        <p class="text-xs text-slate-400">Vendor Accreditation</p>
+                                        <p class="text-xs text-slate-500 mt-1">Certified proficiency in node-based rigging, deformers, and cut-out production.</p>
+                                    </div>
+                                    <span class="text-xs font-mono font-semibold px-2 py-1 bg-cinema-cyan/10 text-cinema-cyan rounded border border-cinema-cyan/30">Toon Boom Cert</span>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-cinema-950 border border-cinema-700">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <h5 class="font-semibold text-white text-sm">Autodesk Certified Professional (Maya)</h5>
+                                        <p class="text-xs text-slate-400">Industry Certification</p>
+                                        <p class="text-xs text-slate-500 mt-1">Verified expertise in character setup, skinning, camera setup, and graph editing.</p>
+                                    </div>
+                                    <span class="text-xs font-mono font-semibold px-2 py-1 bg-purple-950 text-purple-300 rounded border border-purple-800">Autodesk Certified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="duties" class="py-16 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-cinema-purple font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider">// Section 02</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Production Duties & Creative Process</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">The structured, step-by-step pipeline for feature film, TV series, game, and commercial animation.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Step 1 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-cinema-coral/20 text-cinema-coral font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                01
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Storyboarding & Animatic Setup</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Reviewing director scripts, sketching shot panels, defining camera motion, timing animatics with dialogue/audio tracks, and establishing key beats.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cinema-700/80 text-xs font-mono text-cinema-coral flex items-center gap-2">
+                            <i class="fa-solid fa-images"></i> Panels & Audio Track
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-cinema-cyan/20 text-cinema-cyan font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                02
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Character Rigging & Topology</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Building skeleton deformers, setting up IK/FK limbs, painting mesh skin weights, building custom face shape keys, and testing range-of-motion (ROM).
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cinema-700/80 text-xs font-mono text-cinema-cyan flex items-center gap-2">
+                            <i class="fa-solid fa-bone"></i> IK/FK Rigging & ROM
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-cinema-purple/20 text-cinema-purple font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                03
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Keyframing & Blocking Passes</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Posing key story beats on stepped tangents, establishing silhouettes, defining character weight/gravity, and timing key poses against sound cuts.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cinema-700/80 text-xs font-mono text-cinema-purple flex items-center gap-2">
+                            <i class="fa-solid fa-cubes"></i> Stepped Keyframes
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-cinema-gold/20 text-cinema-gold font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                04
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">In-betweening, Splining & Polish</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Converting stepped curves to smooth splines, refining arcs, adding overlap/follow-through, micro-editing eye darts, and polishing arcs to perfection.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cinema-700/80 text-xs font-mono text-cinema-gold flex items-center gap-2">
+                            <i class="fa-solid fa-bezier-curve"></i> Spline Polish & Arcs
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                05
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Compositing, Lighting & VFX</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Rendering multi-pass layers, setting up rim lights, adding depth-of-field, integrating particle effects, motion blur, and color grading passes.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cinema-700/80 text-xs font-mono text-rose-400 flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Render Passes & Grade
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 font-mono flex items-center justify-center font-bold text-sm mb-4">
+                                06
+                            </div>
+                            <h4 class="font-display text-lg font-bold text-white mb-2">Director Feedback & Revisions</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                Submitting dailies/rushes for review, incorporating lead animator notes, tweaking performance timing, and exporting master deliverables.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-cinema-700/80 text-xs font-mono text-emerald-400 flex items-center gap-2">
+                            <i class="fa-solid fa-comments"></i> Dailies & Deliverables
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="pay" class="py-16 bg-cinema-900/60 border-t border-cinema-700/60 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-cinema-gold font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider">// Section 03</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Average Pay & Industry Benchmarks</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">UK animator salary tiers, studio vs. freelance rates, and revenue channel breakdown.</p>
+                </div>
+
+                <!-- Pay Tiers Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    
+                    <!-- Tier 1 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-cinema-coral uppercase tracking-wide">Junior / Graduate</span>
+                            <h3 class="font-display text-2xl font-extrabold text-white mt-2 mb-1">£22k – £28k</h3>
+                            <p class="text-slate-400 text-xs mb-4">Annual Base Salary (UK)</p>
+                            <p class="text-slate-300 text-xs leading-relaxed border-t border-cinema-700/80 pt-3">
+                                Entry-level junior animator or runner in studio environments, working on in-betweens, cleanup, or basic motion graphic templates.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 text-[11px] font-mono text-slate-400">
+                            Freelance: ~£140 – £200 / day
+                        </div>
+                    </div>
+
+                    <!-- Tier 2 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-cinema-coral/40">
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-cinema-cyan uppercase tracking-wide">Mid-Level Specialist</span>
+                            <h3 class="font-display text-2xl font-extrabold text-white mt-2 mb-1">£28k – £40k</h3>
+                            <p class="text-slate-400 text-xs mb-4">Annual Base Salary (UK)</p>
+                            <p class="text-slate-300 text-xs leading-relaxed border-t border-cinema-700/80 pt-3">
+                                Experienced character animator, rigger, or motion designer handling hero character shots or core client commercial projects.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 text-[11px] font-mono text-slate-400">
+                            Freelance: ~£220 – £320 / day
+                        </div>
+                    </div>
+
+                    <!-- Tier 3 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-cinema-purple uppercase tracking-wide">Senior / Lead Animator</span>
+                            <h3 class="font-display text-2xl font-extrabold text-white mt-2 mb-1">£40k – £60k</h3>
+                            <p class="text-slate-400 text-xs mb-4">Annual Base Salary (UK)</p>
+                            <p class="text-slate-300 text-xs leading-relaxed border-t border-cinema-700/80 pt-3">
+                                Lead animator guiding shot allocation, approving team keyframe passes, building master character rigs, and setting visual standards.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 text-[11px] font-mono text-slate-400">
+                            Freelance: ~£350 – £450+ / day
+                        </div>
+                    </div>
+
+                    <!-- Tier 4 -->
+                    <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-cinema-gold uppercase tracking-wide">Animation Director / Supervisor</span>
+                            <h3 class="font-display text-2xl font-extrabold text-white mt-2 mb-1">£60k – £90k+</h3>
+                            <p class="text-slate-400 text-xs mb-4">Annual Base Salary (UK)</p>
+                            <p class="text-slate-300 text-xs leading-relaxed border-t border-cinema-700/80 pt-3">
+                                Creative director or VFX/animation supervisor overseeing entire studio pipelines, feature films, and broadcast television series.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 text-[11px] font-mono text-slate-400">
+                            Contract: ~£500 – £800 / day
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Industry Sector Revenue Channels -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
+                    <h3 class="font-display font-bold text-white text-base sm:text-lg mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-cinema-coral"></i> Industry Revenue & Sector Distribution
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="p-4 rounded-xl bg-cinema-950 border border-cinema-700">
+                            <span class="text-2xl font-black text-cinema-coral block font-mono">40%</span>
+                            <span class="text-xs text-slate-300 font-semibold block mt-1">Feature Film & TV Series</span>
+                            <span class="text-[10px] text-slate-500">Studios & Streaming</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-cinema-950 border border-cinema-700">
+                            <span class="text-2xl font-black text-cinema-cyan block font-mono">30%</span>
+                            <span class="text-xs text-slate-300 font-semibold block mt-1">Game Studios (AAA & Indie)</span>
+                            <span class="text-[10px] text-slate-500">In-game & Cutscenes</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-cinema-950 border border-cinema-700">
+                            <span class="text-2xl font-black text-cinema-purple block font-mono">20%</span>
+                            <span class="text-xs text-slate-300 font-semibold block mt-1">Commercials & Ads</span>
+                            <span class="text-[10px] text-slate-500">Agencies & Brand Content</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-cinema-950 border border-cinema-700">
+                            <span class="text-2xl font-black text-cinema-gold block font-mono">10%</span>
+                            <span class="text-xs text-slate-300 font-semibold block mt-1">Freelance Commissions</span>
+                            <span class="text-[10px] text-slate-500">Independent Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="py-16 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-cinema-coral font-mono font-semibold text-xs sm:text-sm uppercase tracking-wider">// Section 04</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mt-2">Animation Production Cost & Timeline Estimator</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mt-2">Select your animation style, target duration, frame rate, and complexity to calculate frames, hours, turnaround, and cost.</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 sm:p-8 border-cinema-coral/30 max-w-4xl mx-auto glow-coral">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        
+                        <!-- Configuration Controls -->
+                        <div class="lg:col-span-7 space-y-6">
+                            
+                            <!-- Animation Style -->
+                            <div>
+                                <label class="text-xs font-semibold text-slate-200 mb-2 block flex items-center justify-between">
+                                    <span><i class="fa-solid fa-film text-cinema-coral mr-1.5"></i> Animation Style & Technique</span>
+                                </label>
+                                <select id="styleSelect" class="w-full bg-cinema-950 border border-cinema-700 text-white text-xs sm:text-sm rounded-xl p-3 focus:border-cinema-coral focus:outline-none font-mono">
+                                    <option value="0.8" data-cost="40" data-name="2D Cutout / Vector Rig" selected>2D Cutout / Vector Rigged Animation</option>
+                                    <option value="2.8" data-cost="130" data-name="2D Frame-by-Frame Traditional">2D Frame-by-Frame Traditional Hand-Drawn</option>
+                                    <option value="2.2" data-cost="110" data-name="3D Character Keyframe Animation">3D Character Keyframe Performance</option>
+                                    <option value="0.7" data-cost="35" data-name="2D/3D Motion Graphics">2D/3D Motion Graphics & Broadcast Design</option>
+                                    <option value="3.5" data-cost="180" data-name="High-End 3D Visual Effects (VFX)">High-End 3D Character VFX & Compositing</option>
+                                </select>
+                            </div>
+
+                            <!-- Duration Slider -->
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label for="durationSlider" class="text-xs font-semibold text-slate-200 flex items-center gap-1.5">
+                                        <i class="fa-solid fa-stopwatch text-cinema-cyan"></i> Target Duration (Seconds)
+                                    </label>
+                                    <span id="durationVal" class="text-xs font-mono text-cinema-coral font-bold bg-cinema-950 px-2.5 py-1 rounded-md border border-cinema-700">30 Secs</span>
+                                </div>
+                                <input type="range" id="durationSlider" min="5" max="300" step="5" value="30" class="w-full">
+                                <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                                    <span>5s (Teaser)</span>
+                                    <span>60s (Commercial)</span>
+                                    <span>300s (5 Mins)</span>
+                                </div>
+                            </div>
+
+                            <!-- Frame Rate FPS -->
+                            <div>
+                                <label class="text-xs font-semibold text-slate-200 mb-2 block flex items-center gap-1.5">
+                                    <i class="fa-solid fa-play text-cinema-purple"></i> Target Frame Rate (FPS)
+                                </label>
+                                <select id="fpsSelect" class="w-full bg-cinema-950 border border-cinema-700 text-white text-xs sm:text-sm rounded-xl p-3 focus:border-cinema-coral focus:outline-none font-mono">
+                                    <option value="24" selected>24 FPS (Cinematic Standard / On Twos or Ones)</option>
+                                    <option value="30">30 FPS (TV Broadcast & Web Commercials)</option>
+                                    <option value="60">60 FPS (High-Smooth Gaming & Real-time)</option>
+                                </select>
+                            </div>
+
+                            <!-- Rigging / Model Complexity -->
+                            <div>
+                                <label class="text-xs font-semibold text-slate-200 mb-2 block flex items-center gap-1.5">
+                                    <i class="fa-solid fa-layer-group text-cinema-gold"></i> Rigging & Model Complexity
+                                </label>
+                                <select id="complexitySelect" class="w-full bg-cinema-950 border border-cinema-700 text-white text-xs sm:text-sm rounded-xl p-3 focus:border-cinema-coral focus:outline-none font-mono">
+                                    <option value="1.0" data-name="Basic (Single Simple Character / Prop)" selected>Basic (1 Simple Character or Geometric Prop)</option>
+                                    <option value="1.35" data-name="Standard (1-2 Characters + Environment)">Standard (1-2 Characters + Background Environment)</option>
+                                    <option value="1.75" data-name="Complex (Multi-Character Action + VFX)">Complex (Multi-Character Interactions + Dynamic Physics)</option>
+                                </select>
+                            </div>
+
+                            <!-- Audio Sync & Sound Design -->
+                            <div>
+                                <label class="text-xs font-semibold text-slate-200 mb-2 block flex items-center gap-1.5">
+                                    <i class="fa-solid fa-volume-high text-rose-400"></i> Audio Sync & Sound Pipeline
+                                </label>
+                                <select id="audioSelect" class="w-full bg-cinema-950 border border-cinema-700 text-white text-xs sm:text-sm rounded-xl p-3 focus:border-cinema-coral focus:outline-none font-mono">
+                                    <option value="1.0" data-name="No Audio Sync (Silent / Music overlay only)">No Lip-Sync (Music overlay or silent)</option>
+                                    <option value="1.25" data-name="Voiceover & Dialogue Lip-Sync" selected>Voiceover & Dialogue Lip-Sync Matching</option>
+                                    <option value="1.45" data-name="Full Audio (Lip-sync + SFX + Dynamic Mixing)">Full Audio (Lip-sync + Sound Effects + Mixing)</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- Quote Output Display -->
+                        <div class="lg:col-span-5 bg-cinema-950 rounded-2xl p-6 border border-cinema-700 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between pb-4 border-b border-cinema-700">
+                                    <span class="text-xs font-mono font-semibold text-cinema-coral uppercase tracking-wider">Production Output</span>
+                                    <i class="fa-solid fa-film text-slate-500"></i>
+                                </div>
+
+                                <div class="mt-6 space-y-5">
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <span class="text-slate-400 text-xs block">Total Frame Count</span>
+                                            <span id="outFrames" class="font-display text-xl font-bold text-white font-mono">720 Frames</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-slate-400 text-xs block">Estimated Hours</span>
+                                            <span id="outHours" class="font-display text-xl font-bold text-cinema-cyan font-mono">105 Hours</span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <span class="text-slate-400 text-xs block">Estimated Turnaround Time</span>
+                                        <span id="outTimeline" class="font-display text-2xl font-bold text-cinema-purple mt-1 block font-mono">3.0 Studio Weeks</span>
+                                    </div>
+
+                                    <div>
+                                        <span class="text-slate-400 text-xs block">Estimated Project Cost (GBP)</span>
+                                        <span id="outCost" class="font-display text-4xl font-extrabold text-cinema-coral mt-1 block font-mono">£4,200</span>
+                                    </div>
+
+                                    <div class="p-3.5 rounded-xl bg-cinema-900 border border-cinema-800 text-xs text-slate-400 leading-relaxed space-y-1 font-sans">
+                                        <p><i class="fa-solid fa-check text-cinema-cyan mr-1.5"></i> Includes animatic & blocking reviews</p>
+                                        <p><i class="fa-solid fa-check text-cinema-cyan mr-1.5"></i> Includes spline polish & facial pass</p>
+                                        <p><i class="fa-solid fa-check text-cinema-cyan mr-1.5"></i> Multi-pass render & composite export</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="copyEstimateBtn" class="w-full mt-6 py-3.5 rounded-xl bg-gradient-to-r from-cinema-coral via-cinema-purple to-cinema-cyan hover:brightness-110 text-white text-xs font-bold transition-all shadow-lg shadow-cinema-coral/20 flex items-center justify-center gap-2 font-sans">
+                                <i class="fa-solid fa-copy"></i> Copy Estimate Summary
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-cinema-950 border-t border-cinema-700/60 py-8 text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-3 font-mono">
+            <p class="font-medium text-slate-400">Animator Career Profile & Production Portfolio</p>
+            <p>Optimized for <span class="text-cinema-coral">GitHub Pages</span> deployment & mobile QR sharing.</p>
+            <p class="pt-2 text-slate-600">&copy; <span id="yearSpan"></span> Animator Career Profile. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="qrModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="glass-card bg-cinema-900 border-cinema-coral/40 rounded-2xl max-w-md w-full p-6 text-center relative shadow-2xl">
+            <button id="qrCloseBtn" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="w-12 h-12 rounded-full bg-cinema-coral/20 text-cinema-coral flex items-center justify-center mx-auto mb-3">
+                <i class="fa-solid fa-qrcode text-xl"></i>
+            </div>
+
+            <h3 class="font-display text-xl font-bold text-white mb-1">GitHub Pages QR Generator</h3>
+            <p class="text-slate-400 text-xs mb-5">Enter your hosted GitHub Pages URL to generate a mobile-scannable QR code for instant viewing.</p>
+
+            <!-- URL Input Field -->
+            <div class="mb-4 text-left font-mono">
+                <label for="qrUrlInput" class="text-xs font-semibold text-slate-300 mb-1 block">Hosted GitHub Pages Link</label>
+                <input type="url" id="qrUrlInput" class="w-full bg-cinema-950 border border-cinema-700 text-white text-xs rounded-xl p-3 focus:border-cinema-coral focus:outline-none" placeholder="https://username.github.io/animator-portfolio/">
+            </div>
+
+            <!-- QR Code Canvas Render Box -->
+            <div class="bg-white p-4 rounded-2xl inline-block shadow-inner mb-4">
+                <div id="qrcode"></div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button id="copyUrlBtn" class="flex-1 py-2.5 rounded-xl bg-cinema-800 hover:bg-cinema-700 text-slate-200 text-xs font-semibold border border-cinema-700 transition-colors flex items-center justify-center gap-1.5 font-mono">
+                    <i class="fa-solid fa-copy"></i> Copy Link
+                </button>
+                <button id="downloadQrBtn" class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-cinema-coral to-cinema-purple text-white text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-md font-mono">
+                    <i class="fa-solid fa-download"></i> Download PNG
+                </button>
+            </div>
+
+            <!-- GitHub Pages Setup Instructions -->
+            <div class="mt-4 p-3 rounded-xl bg-cinema-950 border border-cinema-800 text-[11px] text-slate-400 text-left space-y-1 font-mono">
+                <p class="text-cinema-coral font-semibold">GitHub Pages Instructions:</p>
+                <p>1. Name this file <code class="text-white">index.html</code> in your repository root.</p>
+                <p>2. Enable Pages in <code class="text-white">Settings -&gt; Pages -&gt; Branch: main</code>.</p>
+                <p>3. Paste your published URL above to download your custom QR code.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Popup -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-cinema-coral text-white px-4 py-2.5 rounded-xl shadow-lg text-xs font-bold flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 font-mono">
+        <i class="fa-solid fa-circle-check"></i> <span id="toastMsg">Action completed successfully!</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic current year in footer
+            document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+            // Mobile Navigation Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // QR Code Generator Logic
+            const qrModal = document.getElementById('qrModal');
+            const qrOpenBtn = document.getElementById('qrOpenBtn');
+            const qrCloseBtn = document.getElementById('qrCloseBtn');
+            const qrUrlInput = document.getElementById('qrUrlInput');
+            const qrcodeContainer = document.getElementById('qrcode');
+            const downloadQrBtn = document.getElementById('downloadQrBtn');
+
+            function generateQRCode(url) {
+                if (!url) url = window.location.href;
+                qrcodeContainer.innerHTML = '';
+                
+                new QRCode(qrcodeContainer, {
+                    text: url,
+                    width: 170,
+                    height: 170,
+                    colorDark: "#0a0b10",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+
+            function openQRModal() {
+                const currentUrl = window.location.href;
+                qrUrlInput.value = currentUrl;
+                generateQRCode(currentUrl);
+                qrModal.classList.remove('hidden');
+            }
+
+            function closeQRModal() {
+                qrModal.classList.add('hidden');
+            }
+
+            qrOpenBtn.addEventListener('click', openQRModal);
+            qrCloseBtn.addEventListener('click', closeQRModal);
+            qrModal.addEventListener('click', (e) => {
+                if (e.target === qrModal) closeQRModal();
+            });
+
+            qrUrlInput.addEventListener('input', (e) => {
+                const val = e.target.value.trim();
+                generateQRCode(val || window.location.href);
+            });
+
+            // Copy URL Button
+            document.getElementById('copyUrlBtn').addEventListener('click', () => {
+                const textToCopy = qrUrlInput.value || window.location.href;
+                copyToClipboard(textToCopy);
+                showToast('GitHub Pages URL copied to clipboard!');
+            });
+
+            // Download QR Code PNG
+            downloadQrBtn.addEventListener('click', () => {
+                const img = qrcodeContainer.querySelector('img');
+                const canvas = qrcodeContainer.querySelector('canvas');
+                let imageSrc = '';
+
+                if (img && img.src) {
+                    imageSrc = img.src;
+                } else if (canvas) {
+                    imageSrc = canvas.toDataURL("image/png");
+                }
+
+                if (imageSrc) {
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = imageSrc;
+                    downloadLink.download = 'animator-portfolio-qr.png';
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                    showToast('QR Code PNG downloaded!');
+                } else {
+                    showToast('Unable to export QR code image.');
+                }
+            });
+
+            // Estimator Calculator Logic
+            const styleSelect = document.getElementById('styleSelect');
+            const durationSlider = document.getElementById('durationSlider');
+            const durationVal = document.getElementById('durationVal');
+            const fpsSelect = document.getElementById('fpsSelect');
+            const complexitySelect = document.getElementById('complexitySelect');
+            const audioSelect = document.getElementById('audioSelect');
+
+            const outFrames = document.getElementById('outFrames');
+            const outHours = document.getElementById('outHours');
+            const outTimeline = document.getElementById('outTimeline');
+            const outCost = document.getElementById('outCost');
+            const copyEstimateBtn = document.getElementById('copyEstimateBtn');
+
+            function calculateEstimates() {
+                const seconds = parseInt(durationSlider.value);
+                durationVal.textContent = `${seconds} Secs`;
+
+                const hrsPerSec = parseFloat(styleSelect.value);
+                const baseCostPerSec = parseFloat(styleSelect.options[styleSelect.selectedIndex].getAttribute('data-cost'));
+                const fps = parseInt(fpsSelect.value);
+                const complexityMult = parseFloat(complexitySelect.value);
+                const audioMult = parseFloat(audioSelect.value);
+
+                // Calculations
+                const totalFrames = seconds * fps;
+                const totalHours = Math.round(seconds * hrsPerSec * complexityMult * audioMult);
+                const totalCost = Math.round(seconds * baseCostPerSec * complexityMult * audioMult);
+                const studioWeeks = (totalHours / 35).toFixed(1); // 35 hours per standard studio week
+
+                outFrames.textContent = `${totalFrames.toLocaleString('en-GB')} Frames`;
+                outHours.textContent = `${totalHours.toLocaleString('en-GB')} Hours`;
+                outTimeline.textContent = `${studioWeeks} Studio Weeks`;
+                outCost.textContent = `£${totalCost.toLocaleString('en-GB')}`;
+            }
+
+            styleSelect.addEventListener('change', calculateEstimates);
+            durationSlider.addEventListener('input', calculateEstimates);
+            fpsSelect.addEventListener('change', calculateEstimates);
+            complexitySelect.addEventListener('change', calculateEstimates);
+            audioSelect.addEventListener('change', calculateEstimates);
+
+            // Initial calculation run
+            calculateEstimates();
+
+            // Copy Estimate Summary
+            copyEstimateBtn.addEventListener('click', () => {
+                const styleName = styleSelect.options[styleSelect.selectedIndex].getAttribute('data-name');
+                const complexityName = complexitySelect.options[complexitySelect.selectedIndex].getAttribute('data-name');
+                const audioName = audioSelect.options[audioSelect.selectedIndex].getAttribute('data-name');
+
+                const summaryText = `Animation Production Estimate:\n\nParameters:\n- Style: ${styleName}\n- Duration: ${durationSlider.value} seconds @ ${fpsSelect.value} FPS\n- Complexity: ${complexityName}\n- Audio Pipeline: ${audioName}\n\nEstimated Output:\n- Total Frames: ${outFrames.textContent}\n- Studio Hours: ${outHours.textContent}\n- Turnaround: ${outTimeline.textContent}\n- Estimated Cost: ${outCost.textContent}`;
+
+                copyToClipboard(summaryText);
+                showToast('Estimate summary copied to clipboard!');
+            });
+
+            function copyToClipboard(text) {
+                const tempInput = document.createElement('textarea');
+                tempInput.value = text;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+            }
+
+            function showToast(msg) {
+                const toast = document.getElementById('toast');
+                const toastMsg = document.getElementById('toastMsg');
+                toastMsg.textContent = msg;
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 2500);
+            }
+        });
+    </script>
+</body>
+</html>
